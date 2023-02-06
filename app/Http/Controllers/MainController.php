@@ -55,7 +55,13 @@ class MainController extends Controller
         return view('pages.edit',$data);
     }
     public function editPerson(Request $request , Person $person){
-        $data = $request -> all();
+        $data = $request -> validate([
+            'firstName' => 'required|max:32',
+            'lastName' => 'required|max:32',
+            // data obbligatorio e deve essere una data anteriore ad oggi 
+            'dateOfBirth' => 'required|before:'.now(),
+            'height' => 'integer|min:1'
+        ]);
 
         $person -> firstName = $data['firstName'];
         $person -> lastName = $data['lastName'];

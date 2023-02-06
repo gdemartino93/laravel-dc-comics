@@ -8,6 +8,15 @@
 <div class="col-12 d-flex justify-content-center">
     <form action="" method="POST" class="flex-column d-flex col-4 my-5 addNew">
         @csrf
+        @if ($errors ->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors -> all() as $error)
+                        <li> {{$error}} </li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
         <label for="firstName">Nome</label>
         <input type="text" name="firstName" value="{{$person -> firstName}}">
         <label for="lastName">Cognome</label>
