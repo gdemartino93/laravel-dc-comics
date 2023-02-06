@@ -9,8 +9,8 @@
             <h1>Lista persone</h1>
         </div>
         <div class="col-1">
-            <a href="">
-                <i class="fa-solid fa-square-plus"></i>
+            <a href="{{route('person.add')}}">
+                <i class="fa-solid fa-user-plus"></i>
             </a>
         </div>
     </div>

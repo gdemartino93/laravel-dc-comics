@@ -24,3 +24,5 @@ Route::get('/person/delete/{person}',[MainController::class, 'deletePerson'])
 // go to add new element page
 Route::get('person/addnew' , [MainController::class , 'addNew'])
      ->name('person.add');
+Route::post('person/addnew' , [MainController::class, 'addStore'])
+     ->name('person.store');
