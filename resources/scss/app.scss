@@ -5,4 +5,11 @@
     padding: 10px;
     background:bisque;
     margin: 5px;
+    &:hover{
+        box-shadow: 5px 5px 5px grey;
+    }
+    a{
+        text-decoration: none;
+        color: inherit;
+    }
 }

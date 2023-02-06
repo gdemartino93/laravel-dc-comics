@@ -13,4 +13,8 @@ class MainController extends Controller
         $data = ["peoples" => $peoples];
         return view('pages.home',$data);
     }
+    public function singlePerson(Person $person){
+
+        return view('pages.single', compact('person'));
+    }
 }

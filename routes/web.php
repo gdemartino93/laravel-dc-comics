@@ -15,3 +15,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [MainController::class, 'home'])
      ->name('person.home');
+
+Route::get('/person/show/{person}', [MainController::class , 'singlePerson'])
+    ->name('person.singlePerson');
