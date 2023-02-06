@@ -21,4 +21,8 @@ class MainController extends Controller
         $person -> delete();
         return redirect() -> route('person.home');
     }
+    public function addNew(){
+        
+        return view('pages.addNew');
+    }
 }

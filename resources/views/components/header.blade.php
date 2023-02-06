@@ -5,8 +5,13 @@
                 <i class="fa-solid fa-house"></i>
             </a>
         </div>
-        <div class="col-8">
+        <div class="col-7">
             <h1>Lista persone</h1>
+        </div>
+        <div class="col-1">
+            <a href="">
+                <i class="fa-solid fa-square-plus"></i>
+            </a>
         </div>
     </div>
 </div>
