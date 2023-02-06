@@ -1,15 +1,36 @@
 @import '~bootstrap/scss/bootstrap';
+@import "@fortawesome/fontawesome-free/css/all.css";
 
 .myItem{
     border: 1px solid black;
     padding: 10px;
     background:bisque;
     margin: 5px;
+    width: 200px;
     &:hover{
         box-shadow: 5px 5px 5px grey;
     }
     a{
         text-decoration: none;
         color: inherit;
+    }
+}
+.myItemSingle{
+    border: 1px solid black;
+    padding: 10px;
+    background:bisque;
+    margin: 5px;
+    // width: 100%;
+    text-align: center;
+}
+header{
+    height: 10vh;
+    background: firebrick;
+    i{
+        font-size: 30px;
+        color: white;
+    }
+    h1{
+        color: white;
     }
 }
