@@ -1,6 +1,9 @@
 <div class="col-12 d-flex justify-content-center">
-{{-- 
-    @if ($errors ->any())
+
+
+{{-- si potrebbe rendere un componente più dinamico usando gli yield per ogni label/input cosi' da poter usare lo stesso form per più cose (credo) --}}
+    <form action="" method="POST" class="flex-column d-flex col-4 my-5 addNew">
+        @if ($errors ->any())
         <div class="alert alert-danger">
             <ul>
                 @foreach ($errors -> all() as $error)
@@ -8,10 +11,7 @@
                 @endforeach
             </ul>
         </div>
-
-    @endif --}}
-{{-- si potrebbe rendere un componente più dinamico usando gli yield per ogni label/input cosi' da poter usare lo stesso form per più cose (credo) --}}
-    <form action="" method="POST" class="flex-column d-flex col-4 my-5 addNew">
+    @endif
         @csrf
         <label for="firstName">Nome</label>
         <input type="text" name="firstName">

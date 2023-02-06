@@ -31,7 +31,7 @@ class MainController extends Controller
         $data = $request ->validate([
             'firstName' => 'required|max:32',
             'lastName' => 'required|max:32',
-            // data obbligatorio e deve essere before di oggi 
+            // data obbligatorio e deve essere una data anteriore ad oggi 
             'dateOfBirth' => 'required|before:'.now(),
             'height' => 'integer|min:1'
         ]);        
