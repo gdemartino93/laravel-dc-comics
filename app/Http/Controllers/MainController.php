@@ -37,9 +37,9 @@ class MainController extends Controller
         ],
         [
            'firstName.required' => "Innominato, inserisci il tuo nome!",
-            'firstName.max' => "Se hai un nome con più di 32 caratteri, o cambi il nome o cambi il sito. Io ti consiglio la prima!",
+            'firstName.max' => "Hai inserito un nome con " . strlen($request -> firstName) . "caratteri, o cambi il nome o cambi il sito. Io ti consiglio la prima!",
             'lastName.required' => "Innominato, inserisci il tuo cognome!",
-            'lastName.max' => "Se hai un cognome con più di 32 caratteri, o cambi il nome o cambi il sito. Io ti consiglio la prima!",
+            'firstName.max' => "Hai inserito un nome con " . strlen($request -> lastName) . "caratteri, o cambi il nome o cambi il sito. Io ti consiglio la prima!",
             'dateOfBirth.required' => "La data di nascita è obbligatoria ammesso che tu ne abbia una.",
             'dateOfBirth.before' => 'Vieni dal futuro?',
             'height.integer' => 'La tua altezza dovrebbe essere un numero',
