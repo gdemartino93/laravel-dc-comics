@@ -1,7 +1,7 @@
 @extends('layouts.main-layout')
 
 @section('title')
-    <title> edit</title>
+    <title> Stai modificando {{$person -> firstName}} {{$person -> lastName}}</title>
 @endsection
 
 @section('contents')
