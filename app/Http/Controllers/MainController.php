@@ -28,8 +28,15 @@ class MainController extends Controller
     }
     public function addStore(Request $request){
         // da validare dopo
-        $data = $request -> all();
+        // $data = $request -> $request ->validate([
+        //     'firstName' => 'required|max:32',
+        //     'lastName' => 'required|max:32',
+        //     'dateOfBirth' => 'require|before:'.now(),
+        //     'height' => 'integer|min:1'
+        // ]);
 
+        $data = $request -> all();
+        
         $newPerson = new Person();
 
         $newPerson -> firstName = $data['firstName'];
@@ -39,6 +46,26 @@ class MainController extends Controller
 
         $newPerson -> save();
 
+        return redirect() -> route('person.home');
+    }
+    
+    public function goToEditForm(Person $person){
+         
+        $data = ["person" => $person];
+
+
+        return view('pages.edit',$data);
+    }
+    public function editPerson(Request $request , Person $person){
+        $data = $request -> all();
+
+        $person -> firstName = $data['firstName'];
+        $person -> lastName = $data['lastName'];
+        $person -> dateOfBirth = $data['dateOfBirth'];
+        $person -> height = $data['height'];
+
+        $person ->save();
+        
         return redirect() -> route('person.home');
     }
 }

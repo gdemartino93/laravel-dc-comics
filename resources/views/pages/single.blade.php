@@ -11,7 +11,7 @@
         <span>{{$person -> dateOfBirth}}</span>
         <span>{{$person -> height}} cm </span>
         <div class="cmd-single">
-            <a href="">
+            <a href="{{route('person.goToEditForm' , $person)}}">
                 <i class="fa-solid fa-user-pen"></i>
             </a>
             <a href="{{route('person.delete', $person)}}">
