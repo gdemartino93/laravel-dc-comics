@@ -5,11 +5,9 @@
 @endsection
 
 @section('contents')
-    <div class="wrapper d-flex">
-        <div class="container">
-            @foreach ($peoples as $person)
-                @include('components.person')
-            @endforeach 
-        </div>
+    <div class="container d-flex flex-wrap">
+        @foreach ($peoples as $person)
+            @include('components.person')
+        @endforeach 
     </div>
 @endsection

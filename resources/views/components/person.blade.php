@@ -1,5 +1,5 @@
-<div class="d-flex flex-column">
-    <h4>Nome Cognome</h4>
-    <span>Data di nascita</span>
-    <span>Altezza</span>
+<div class="d-flex flex-column myItem">
+    <h4>{{$person -> firstName}} {{$person -> lastName}}</h4>
+    <span>{{$person -> dateOfBirth}}</span>
+    <span>{{$person -> height}} cm </span>
 </div>

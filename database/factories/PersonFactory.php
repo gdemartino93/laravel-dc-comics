@@ -19,7 +19,8 @@ class PersonFactory extends Factory
         return [
             'firstName' => fake() ->firstNameMale(),
             'lastName' => fake()-> lastName(),
-            'dateOfBirth' => fake() ->date('Y-m-d',now())
+            'dateOfBirth' => fake() ->date('Y-m-d',now()),
+            'height' => fake() ->  numberBetween(1,300)
         ];
     }
 }
