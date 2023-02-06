@@ -28,15 +28,13 @@ class MainController extends Controller
     }
     public function addStore(Request $request){
         // da validare dopo
-        // $data = $request -> $request ->validate([
-        //     'firstName' => 'required|max:32',
-        //     'lastName' => 'required|max:32',
-        //     'dateOfBirth' => 'require|before:'.now(),
-        //     'height' => 'integer|min:1'
-        // ]);
-
-        $data = $request -> all();
-        
+        $data = $request ->validate([
+            'firstName' => 'required|max:32',
+            'lastName' => 'required|max:32',
+            // data obbligatorio e deve essere before di oggi 
+            'dateOfBirth' => 'required|before:'.now(),
+            'height' => 'integer|min:1'
+        ]);        
         $newPerson = new Person();
 
         $newPerson -> firstName = $data['firstName'];
