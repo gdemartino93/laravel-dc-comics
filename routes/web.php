@@ -18,3 +18,5 @@ Route::get('/', [MainController::class, 'home'])
 
 Route::get('/person/show/{person}', [MainController::class , 'singlePerson'])
     ->name('person.singlePerson');
+Route::get('/person/delete/{person}',[MainController::class, 'deletePerson'])
+     ->name('person.delete');

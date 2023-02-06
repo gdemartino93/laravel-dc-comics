@@ -10,9 +10,13 @@
         <h4>{{$person -> firstName}} {{$person -> lastName}}</h4>
         <span>{{$person -> dateOfBirth}}</span>
         <span>{{$person -> height}} cm </span>
-        <div>
-            <i class="fa-solid fa-user-pen"></i>
-            <i class="fa-solid fa-trash"></i>
+        <div class="cmd-single">
+            <a href="">
+                <i class="fa-solid fa-user-pen"></i>
+            </a>
+            <a href="{{route('person.delete', $person)}}">
+                <i class="fa-solid fa-trash"></i>
+            </a>
         </div>
     </div>
 </div>
