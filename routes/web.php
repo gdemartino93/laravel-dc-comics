@@ -26,3 +26,5 @@ Route::get('person/addnew' , [MainController::class , 'addNew'])
      ->name('person.add');
 Route::post('person/addnew' , [MainController::class, 'addStore'])
      ->name('person.store');
+Route::post('person/edit/{person}',[MainController::class, 'editPerson'])
+     ->name('person.edit');
