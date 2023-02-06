@@ -34,7 +34,16 @@ class MainController extends Controller
             // data obbligatorio e deve essere una data anteriore ad oggi 
             'dateOfBirth' => 'required|before:'.now(),
             'height' => 'integer|min:1'
-        ]);        
+        ],
+        [
+           'firstName.required' => "Innominato, inserisci il tuo nome!",
+            'firstName.max' => "Se hai un nome con più di 32 caratteri, o cambi il nome o cambi il sito. Io ti consiglio la prima!",
+            'lastName.required' => "Innominato, inserisci il tuo cognome!",
+            'lastName.max' => "Se hai un cognome con più di 32 caratteri, o cambi il nome o cambi il sito. Io ti consiglio la prima!",
+            'dateOfBirth.required' => "La data di nascita è obbligatoria ammesso che tu ne abbia una.",
+            'dateOfBirth.before' => 'Vieni dal futuro?',
+            'height.integer' => 'La tua altezza dovrebbe essere un numero',
+            'height.min' => 'Scusa non ti vedo........................................']);        
         $newPerson = new Person();
 
         $newPerson -> firstName = $data['firstName'];
@@ -61,6 +70,17 @@ class MainController extends Controller
             // data obbligatorio e deve essere una data anteriore ad oggi 
             'dateOfBirth' => 'required|before:'.now(),
             'height' => 'integer|min:1'
+        ],
+        // il secondo array è per definire i messaggi di errore personalizzati
+        [
+            'firstName.required' => "Innominato, inserisci il tuo nome!",
+            'firstName.max' => "Se hai un nome con più di 32 caratteri, o cambi il nome o cambi il sito. Io ti consiglio la prima!",
+            'lastName.required' => "Innominato, inserisci il tuo cognome!",
+            'lastName.max' => "Se hai un cognome con più di 32 caratteri, o cambi il nome o cambi il sito. Io ti consiglio la prima!",
+            'dateOfBirth.required' => "La data di nascita è obbligatoria ammesso che tu ne abbia una.",
+            'dateOfBirth.before' => 'Vieni dal futuro?',
+            'height.integer' => 'La tua altezza dovrebbe essere un numero',
+            'height.min' => 'Scusa non ti vedo........................................'
         ]);
 
         $person -> firstName = $data['firstName'];
@@ -73,3 +93,4 @@ class MainController extends Controller
         return redirect() -> route('person.home');
     }
 }
+
