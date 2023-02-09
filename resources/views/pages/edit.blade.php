@@ -6,6 +6,7 @@
 
 @section('contents')
 <div class="col-12 d-flex justify-content-center">
+    {{-- {{route('person.edit',$person)}} --}}
     <form action="" method="POST" class="flex-column d-flex col-4 my-5 addNew">
         @csrf
         @if ($errors ->any())
